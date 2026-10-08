@@ -11,6 +11,7 @@ import {
   FileText,
   X
 } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton.tsx';
 
 interface ReaderSidebarProps {
   chapters: Chapter[];
@@ -50,7 +51,16 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({
       return chap.hasInfographic;
     }
     if (filterType === 'tools') {
-      return chap.id === 'modulo-9' || chap.id === 'modulo-13' || chap.id === 'prompts-ia' || chap.id === 'glossario';
+      return (
+        chap.id === 'modulo-ferramentas' ||
+        chap.id === 'modulo-1' || 
+        chap.id === 'modulo-3' || 
+        chap.id === 'modulo-9' || 
+        chap.id === 'modulo-13' || 
+        chap.id === 'modulo-14' || 
+        chap.id === 'prompts-ia' || 
+        chap.id === 'glossario'
+      );
     }
 
     return true;
@@ -218,16 +228,22 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({
                         ? 'text-amber-600 dark:text-amber-400' 
                         : isDark ? 'text-slate-500' : 'text-slate-400'
                     }`}>
-                      {chap.number === "0" ? t.generalIntro : `${t.moduleLabel} ${chap.number}`}
+                      {chap.id === 'modulo-ferramentas' 
+                        ? 'ESPECIAL' 
+                        : chap.number === "0" ? t.generalIntro : `${t.moduleLabel} ${chap.number}`}
                     </span>
 
-                    {chap.hasInfographic && (
+                    {chap.id === 'modulo-ferramentas' ? (
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-mono font-bold bg-amber-500 text-slate-950 shadow-2xs">
+                        🛠️ FERRAMENTAS
+                      </span>
+                    ) : chap.hasInfographic ? (
                       <span className={`text-[9px] px-1 py-0.2 rounded font-mono font-medium ${
                         isDark ? 'bg-amber-500/20 text-amber-300' : 'bg-amber-100 text-amber-800'
                       }`}>
                         Infográfico
                       </span>
-                    )}
+                    ) : null}
                   </div>
 
                   <p className="text-xs leading-snug line-clamp-2">
@@ -245,11 +261,14 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({
           )}
         </div>
 
-        {/* Sidebar Footer info */}
-        <div className={`p-3 border-t text-[10px] text-center ${
+        {/* Sidebar Footer info & PWA install */}
+        <div className={`p-3 border-t text-[10px] space-y-2 text-center ${
           isDark ? 'border-slate-800 text-slate-500 bg-slate-950/60' : 'border-slate-100 text-slate-400 bg-slate-50'
         }`}>
-          <span>{t.authorLabel}</span>
+          <div className="flex justify-center">
+            <PWAInstallButton language={language} variant="sidebar" />
+          </div>
+          <p>{t.authorLabel}</p>
         </div>
 
       </aside>

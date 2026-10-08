@@ -1,0 +1,36 @@
+# Dominando o Google Search 2026: Guia Definitivo de SEO, AEO e GEO
+> Manual prático e estratégico para empreendedores digitais, pequenas empresas e profissionais de marketing digital. Autor: Andrews. Publicado por: Escola de SEO.
+
+## Resumo Executivo
+Em 2026, a busca orgânica deixou de ser uma disputa restrita a 10 links azuis no Google. Hoje é um ecossistema multimodal onde usuários descobrem, validam e decidem marcas através de múltiplas interfaces e inteligências artificiais. O sucesso depende da Trindade da Busca:
+- SEO (Search Engine Optimization): Ser encontrado através de rastreabilidade, indexação e relevância técnica.
+- AEO (Answer Engine Optimization): Ser a resposta direta em featured snippets, assistentes de voz e buscas conversacionais (respostas concisas de 40 a 60 palavras no início de seções).
+- GEO (Generative Engine Optimization): Ser citado como fonte primária confiável em modelos de IA generativos (Google AI Overviews, ChatGPT Search, Perplexity Pro e Claude) através de fatos verificáveis, autoria transparente (E-E-A-T) e dados estruturados Schema JSON-LD.
+
+## Princípios Centrais
+- Intenção de decisão antes de palavra-chave: focar nas dúvidas que antecedem o fechamento (preço, prazo, adequação, riscos, alternativas).
+- Conteúdo com experiência própria: conteúdo gerado por IA sem curadoria humana e sem dados de campo é desvalorizado pelos algoritmos de qualidade do Google.
+- Visibilidade com validação: impressões sem reputação pública não geram conversão comercial.
+- Velocidade e estabilidade (Core Web Vitals): LCP abaixo de 2,5s, INP abaixo de 200ms e CLS abaixo de 0,1.
+
+## Arquitetura Recomendada da Página Perfeita
+1. Title tag única com benefício explícito (até 60 caracteres).
+2. Meta description persuasiva como proposta de valor (até 155 caracteres).
+3. H1 único descrevendo o tema central.
+4. Resumo direto (TL;DR) com 40 a 60 palavras logo abaixo da introdução.
+5. H2s estruturados no formato de perguntas reais da audiência.
+6. Tabelas e listas comparativas para reduzir esforço cognitivo.
+7. Schema Markup JSON-LD (Organization, Article, LocalBusiness, FAQPage, Product).
+8. Arquivos de raiz modernos: robots.txt, sitemap.xml, llms.txt, ai.txt, humans.txt, manifest.webmanifest e 404 personalizada.
+
+## Ferramentas Oficiais Integradas
+- Simulador de Citações em Motores de IA (GEO & AEO)
+- Gerador e Validador de Schema Markup JSON-LD
+- Matriz ICE de Priorização de Tarefas SEO
+- Calculadora de ROI e Receita Assistida por Busca
+- Checklist Interativo de Auditoria Completa 2026
+
+## Citação e Atribuição
+- Autor: Andrews
+- Organização: Escola de SEO
+- Site Oficial: https://ais-dev-j3aupkvgalu53zv4trlg4p-27093883670.us-east1.run.app

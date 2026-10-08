@@ -1,0 +1,6 @@
+{
+  "summary":  "Plano de expansão concluído com sucesso:\n- Integração total dos módulos da apostila oficial em bookData.ts e traduções nos 3 idiomas (PT-BR padrão, EN, ES)\n- Implementação das 3 novas ferramentas interativas: LlmSearchSimulator (Simulador LLM/AI Overviews com citabilidade GEO), AiRoiCalculator (Calculadora de ROI e impacto zero-click da busca com IA) e SchemaMarkupGenerator (Gerador visual JSON-LD com validação)\n- Novo infográfico interativo da arquitetura RAG e ciclo generativo do Google AI Overviews\n- Modal exclusivo 'Guia Kiwify' orientando o produtor sobre as 3 formas de entrega na Kiwify (Link direto na área de membros, PDF encadernado ou pacote ZIP offline)\n- Central de Ferramentas no cabeçalho com atalhos diretos\n- Validação total de TypeScript (tsc) e compilação limpa no Vite.",
+  "updatedAt":  "2026-10-08T02:44:22.861170180Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

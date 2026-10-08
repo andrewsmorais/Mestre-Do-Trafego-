@@ -8,11 +8,17 @@ import { AppleNotebook } from './components/AppleNotebook.tsx';
 import { SelectionToolbar } from './components/SelectionToolbar.tsx';
 import { LanguageSelector } from './components/LanguageSelector.tsx';
 import { FontSizeControl, FontScale } from './components/FontSizeControl.tsx';
+import { KiwifyDeliveryModal } from './components/KiwifyDeliveryModal.tsx';
+import { ToolsCatalogModal } from './components/ToolsCatalogModal.tsx';
+import { PWAInstallButton } from './components/PWAInstallButton.tsx';
+import { OfflineIndicator } from './components/OfflineIndicator.tsx';
 import { 
   Menu, 
   Printer, 
   Sun,
-  Moon
+  Moon,
+  Sparkles,
+  ShoppingBag
 } from 'lucide-react';
 
 export default function App() {
@@ -63,6 +69,8 @@ export default function App() {
   const [isSidebarOpenMobile, setIsSidebarOpenMobile] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
   const [isNotebookOpen, setIsNotebookOpen] = useState(false);
+  const [isToolsModalOpen, setIsToolsModalOpen] = useState(false);
+  const [isKiwifyModalOpen, setIsKiwifyModalOpen] = useState(false);
   const [quoteForNotebook, setQuoteForNotebook] = useState<string | null>(null);
 
   // Sync theme to HTML documentElement class
@@ -207,6 +215,34 @@ export default function App() {
             {isDark ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
           </button>
 
+          {/* Tools Catalog Button */}
+          <button
+            onClick={() => setIsToolsModalOpen(true)}
+            className={`inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-semibold cursor-pointer transition-colors shadow-2xs ${
+              isDark 
+                ? 'bg-amber-950/40 border-amber-600/50 hover:bg-amber-900/60 text-amber-300' 
+                : 'bg-amber-50 border-amber-300 hover:bg-amber-100 text-amber-900'
+            }`}
+            title={t.toolsCatalog}
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+            <span className="hidden sm:inline">{t.toolsCatalog}</span>
+          </button>
+
+          {/* Kiwify Delivery Guide Button */}
+          <button
+            onClick={() => setIsKiwifyModalOpen(true)}
+            className={`hidden md:inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-semibold cursor-pointer transition-colors shadow-2xs ${
+              isDark 
+                ? 'bg-slate-900 border-emerald-700/60 hover:bg-emerald-950/40 text-emerald-300' 
+                : 'bg-white border-emerald-300 hover:bg-emerald-50 text-emerald-800'
+            }`}
+            title={t.kiwifyGuide}
+          >
+            <ShoppingBag className="w-3.5 h-3.5 text-emerald-500" />
+            <span>{t.kiwifyGuide}</span>
+          </button>
+
           {/* Notebook Button */}
           <button
             onClick={() => setIsNotebookOpen(true)}
@@ -216,6 +252,9 @@ export default function App() {
             <span className="text-xs">📝</span>
             <span className="inline">{t.notebook}</span>
           </button>
+
+          {/* PWA Install Button */}
+          <PWAInstallButton language={language} variant="header" />
 
           {/* PDF Download Button */}
           <button
@@ -323,6 +362,29 @@ export default function App() {
         language={language}
         isDark={isDark}
       />
+
+      {/* Interactive Tools Catalog Dialog */}
+      <ToolsCatalogModal
+        isOpen={isToolsModalOpen}
+        onClose={() => setIsToolsModalOpen(false)}
+        onSelectChapter={(id) => {
+          setActiveChapterId(id);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        language={language}
+        isDark={isDark}
+      />
+
+      {/* Kiwify Delivery Guide Modal */}
+      <KiwifyDeliveryModal
+        isOpen={isKiwifyModalOpen}
+        onClose={() => setIsKiwifyModalOpen(false)}
+        language={language}
+        isDark={isDark}
+      />
+
+      {/* PWA Offline Mode Toast / Notification */}
+      <OfflineIndicator language={language} />
 
     </div>
   );

@@ -1,0 +1,51 @@
+# ==============================================================================
+# robots.txt — Dominando o Google Search 2026 (Escola de SEO)
+# Permite rastreamento irrestrito para Google e os principais agentes de IA (GEO)
+# Bloqueia explicitamente a página de erro 404 para proteger o índice orgânico
+# ==============================================================================
+
+User-agent: *
+Disallow: /404.html
+Disallow: /404
+
+# ------------------------------------------------------------------------------
+# Agentes de IA / Motores Generativos Permitidos (GEO - Generative Engine Optimization)
+# ------------------------------------------------------------------------------
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# ------------------------------------------------------------------------------
+# Arquivos de Referência, Sitemap e Metadados para IAs e Humanos
+# ------------------------------------------------------------------------------
+Sitemap: https://ais-dev-j3aupkvgalu53zv4trlg4p-27093883670.us-east1.run.app/sitemap.xml
+# Padrões Internacionais GEO:
+# llms.txt: /llms.txt
+# ai.txt: /ai.txt
+# humans.txt: /humans.txt

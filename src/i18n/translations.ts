@@ -14,6 +14,8 @@ export interface TranslationDictionary {
   notebook: string;
   notesTitle: string;
   pdfDownload: string;
+  toolsCatalog: string;
+  kiwifyGuide: string;
   lightMode: string;
   darkMode: string;
   themeToggle: string;
@@ -102,6 +104,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     notebook: "Caderno",
     notesTitle: "Anotações",
     pdfDownload: "Baixar PDF",
+    toolsCatalog: "Ferramentas",
+    kiwifyGuide: "Guia Kiwify",
     lightMode: "Modo Claro",
     darkMode: "Modo Noturno",
     themeToggle: "Alternar Tema Noturno/Claro",
@@ -230,6 +234,10 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       "glossario": {
         title: "Módulo Bônus 2 — Glossário Essencial",
         subtitle: "Conceitos técnicos e estratégicos explicados de forma direta"
+      },
+      "modulo-ferramentas": {
+        title: "Módulo 21 — Central de Ferramentas & Simuladores Práticos",
+        subtitle: "Simulador GEO, Gerador de Schema JSON-LD, Matriz ICE, Calculadora de ROI e Checklist"
       }
     }
   },
@@ -248,6 +256,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     notebook: "Notebook",
     notesTitle: "Notes",
     pdfDownload: "Download PDF",
+    toolsCatalog: "Tools",
+    kiwifyGuide: "Kiwify Guide",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     themeToggle: "Toggle Dark/Light Mode",
@@ -376,6 +386,10 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       "glossario": {
         title: "Bonus Module 2 — Essential Glossary",
         subtitle: "Key technical and strategic definitions explained straight to the point"
+      },
+      "modulo-ferramentas": {
+        title: "Module 21 — Interactive Tools & Simulators Center",
+        subtitle: "GEO Simulator, Schema JSON-LD Generator, ICE Matrix, ROI and Checklist"
       }
     }
   },
@@ -394,6 +408,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     notebook: "Cuaderno",
     notesTitle: "Notas",
     pdfDownload: "Descargar PDF",
+    toolsCatalog: "Herramientas",
+    kiwifyGuide: "Guía Kiwify",
     lightMode: "Modo Claro",
     darkMode: "Modo Oscuro",
     themeToggle: "Alternar Modo Oscuro/Claro",
@@ -522,6 +538,10 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       "glossario": {
         title: "Módulo Extra 2 — Glosario Esencial",
         subtitle: "Conceptos técnicos y estratégicos explicados de forma directa y clara"
+      },
+      "modulo-ferramentas": {
+        title: "Módulo 21 — Central de Herramientas y Simuladores Prácticos",
+        subtitle: "Simulador GEO, Generador de Schema JSON-LD, Matriz ICE, ROI y Checklist"
       }
     }
   }

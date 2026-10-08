@@ -1,0 +1,66 @@
+{
+  "name": "Dominando o Google Search 2026 — Escola de SEO",
+  "short_name": "SEO & GEO 2026",
+  "description": "O Guia Definitivo do SEO, AEO e GEO — Do Zero ao Avançado. Leitor digital e ferramentas interativas por Andrews.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#0B0F19",
+  "orientation": "any",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "education",
+    "business",
+    "productivity",
+    "books"
+  ],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Central de Ferramentas",
+      "short_name": "Ferramentas",
+      "description": "Simuladores de IA, Schema e Calculadoras",
+      "url": "/#modulo-ferramentas",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Anatomia da Página",
+      "short_name": "Anatomia",
+      "description": "Estrutura on-page e arquivos raiz",
+      "url": "/#modulo-3",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

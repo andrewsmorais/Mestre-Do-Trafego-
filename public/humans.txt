@@ -1,0 +1,21 @@
+/* TEAM */
+Autor & Estrategista de Busca: Andrews
+Publicado por: Escola de SEO
+Site da Escola: https://ais-dev-j3aupkvgalu53zv4trlg4p-27093883670.us-east1.run.app
+Contato: dandtecno@gmail.com
+Localização: Brasil
+
+/* THANKS */
+Comunidade de SEO, AEO e GEO 2026
+Pesquisadores de IA e Engenharia de Recuperação (RAG)
+Leitores e alunos da Escola de SEO
+
+/* SITE */
+Projeto: Dominando o Google Search 2026
+Linguagens: HTML5, CSS3, JavaScript, TypeScript
+Padrões: W3C Valid, PWA (Progressive Web App), Schema.org JSON-LD
+Padrões para IAs: llms.txt, ai.txt
+Design: Minimalista Luxury Dark / Editorial Serif
+Tecnologia: React 19, Vite, Tailwind CSS
+Criado por: Escola de SEO
+Última Atualização: Outubro de 2026

@@ -10,8 +10,14 @@ import { QuickWinsInfographic } from './infographics/QuickWinsInfographic.tsx';
 import { ExecutionPlanInfographic } from './infographics/ExecutionPlanInfographic.tsx';
 import { ClickToRevenueInfographic } from './infographics/ClickToRevenueInfographic.tsx';
 import { EthicalSeoInfographic } from './infographics/EthicalSeoInfographic.tsx';
+import { AiRagInfographic } from './infographics/AiRagInfographic.tsx';
 import { MatrizPriorizacaoCalc } from './InteractiveTools/MatrizPriorizacaoCalc.tsx';
 import { FullAuditChecklist } from './InteractiveTools/FullAuditChecklist.tsx';
+import { LlmSearchSimulator } from './InteractiveTools/LlmSearchSimulator.tsx';
+import { AiRoiCalculator } from './InteractiveTools/AiRoiCalculator.tsx';
+import { SchemaMarkupGenerator } from './InteractiveTools/SchemaMarkupGenerator.tsx';
+import { AnatomyFilesPack } from './InteractiveTools/AnatomyFilesPack.tsx';
+import { MasterToolsSuite } from './InteractiveTools/MasterToolsSuite.tsx';
 import { 
   Copy, 
   Check, 
@@ -221,13 +227,54 @@ export const ChapterViewer: React.FC<ChapterViewerProps> = ({
             {chapter.infographicId === 'execution' && <ExecutionPlanInfographic />}
             {chapter.infographicId === 'click_revenue' && <ClickToRevenueInfographic />}
             {chapter.infographicId === 'ethical' && <EthicalSeoInfographic />}
+            {chapter.infographicId === 'ai_rag' && <AiRagInfographic />}
           </div>
         </div>
       )}
 
-      {/* SPECIAL INTERACTIVE TOOLS */}
-      {chapter.id === 'modulo-13' && <div className="chapter-prose-content"><MatrizPriorizacaoCalc /></div>}
-      {chapter.id === 'modulo-9' && <div className="chapter-prose-content"><FullAuditChecklist /></div>}
+      {/* SPECIAL INTERACTIVE TOOLS & COMPANION APPS */}
+      {chapter.id === 'modulo-1' && (
+        <div className="chapter-prose-content space-y-6">
+          <LlmSearchSimulator isDark={isDark} language={language} />
+          <AiRagInfographic />
+        </div>
+      )}
+      {chapter.id === 'modulo-3' && (
+        <div className="chapter-prose-content space-y-8">
+          <SchemaMarkupGenerator isDark={isDark} language={language} />
+          <AnatomyFilesPack isDark={isDark} />
+        </div>
+      )}
+      {chapter.id === 'modulo-9' && (
+        <div className="chapter-prose-content">
+          <FullAuditChecklist />
+        </div>
+      )}
+      {chapter.id === 'modulo-13' && (
+        <div className="chapter-prose-content">
+          <MatrizPriorizacaoCalc />
+        </div>
+      )}
+      {chapter.id === 'modulo-14' && (
+        <div className="chapter-prose-content">
+          <AiRoiCalculator isDark={isDark} language={language} />
+        </div>
+      )}
+      {chapter.id === 'modulo-17' && (
+        <div className="chapter-prose-content">
+          <AiRagInfographic />
+        </div>
+      )}
+      {chapter.id === 'prompts-ia' && (
+        <div className="chapter-prose-content">
+          <LlmSearchSimulator isDark={isDark} language={language} />
+        </div>
+      )}
+      {chapter.id === 'modulo-ferramentas' && (
+        <div className="chapter-prose-content">
+          <MasterToolsSuite isDark={isDark} language={language} />
+        </div>
+      )}
 
       {/* SECTIONS & FULL TEXT CONTENT */}
       <div className="chapter-prose-content space-y-12">

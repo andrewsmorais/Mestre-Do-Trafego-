@@ -296,6 +296,20 @@ export const CHAPTERS: Chapter[] = [
               "Se o usuário lesse apenas o título, o resumo e a tabela, entenderia a oferta?",
               "Minha marca está usando schema para descrever a realidade ou para tentar parecer algo que não é?"
             ]
+          },
+          {
+            title: "3.7 Os Arquivos Estruturais da Raiz (robots, sitemap, llms, ai, manifest, humans e 404)",
+            paragraphs: [
+              "Uma página perfeita não opera isolada. Ela precisa de arquivos de suporte técnico na raiz do domínio (public/) que comunicam regras aos robôs de busca, modelos de inteligência artificial e navegadores móveis.",
+              "• robots.txt: Libera o Google e as IAs (GPTBot, Claude, Perplexity), mas bloqueia a página 404 para proteger o orçamento de rastreamento.",
+              "• sitemap.xml: Mapa canônico do site para o Google rastrear e indexar suas URLs prioritárias sem atraso.",
+              "• llms.txt e ai.txt: Os novos padrões internacionais para que IAs leiam seus arquivos de forma mastigada em Markdown e usem seu conteúdo como resposta em ferramentas como Perplexity, Claude e ChatGPT Search (GEO).",
+              "• manifest.webmanifest: Configurações de PWA (permite que o site seja 'instalado' como app no celular com ícone próprio e tela cheia).",
+              "• humans.txt: Arquivo de autoria e transparência, documentando que o site foi criado pela Escola de SEO e fortalecendo os sinais de E-E-A-T.",
+              "• 404.html: Uma página de 'não encontrado' bonita com design elegante e a tag meta noindex para não sujar seu ranqueamento com erros acidentais.",
+              "• index.html: O esqueleto HTML5 semântico com preconnect de fontes, tags OpenGraph e Schema JSON-LD."
+            ],
+            goldenTip: "Copie ou baixe o pacote pronto desses 8 arquivos na ferramenta interativa abaixo e suba na pasta raiz da sua hospedagem."
           }
         ]
       }
@@ -793,5 +807,23 @@ export const CHAPTERS: Chapter[] = [
         goldenTip: "Construa ativos digitais que o mercado teria motivo genuíno para referenciar mesmo se o algoritmo mudasse amanhã."
       }
     ]
+  },
+  {
+    id: "modulo-ferramentas",
+    number: "21",
+    title: "Módulo Especial — Central de Ferramentas & Simuladores Práticos",
+    subtitle: "Suíte interativa completa: Simulador GEO & AEO, Gerador de Schema JSON-LD, Matriz ICE, Calculadora de ROI e Checklist de Auditoria 2026",
+    sections: [
+      {
+        id: "ferramentas-central",
+        title: "Suíte Operacional de Ferramentas e Simuladores de Busca",
+        content: [
+          "Para colocar em prática os ensinamentos de Andrews e da Escola de SEO, reunimos neste módulo final todas as ferramentas algorítmicas e calculadoras interativas do guia.",
+          "Utilize o Simulador de Citações para avaliar a citabilidade da sua marca em modelos de IA (Google AI Overview, Perplexity, ChatGPT Search), gere códigos Schema JSON-LD semânticos com validação instantânea, calcule o retorno financeiro com a Calculadora de ROI e priorize suas tarefas trimestrais usando a Matriz ICE."
+        ],
+        goldenTip: "Execute um teste completo no Simulador de Citações antes de publicar novas páginas e use o Checklist de Auditoria para certificar a conformidade técnica."
+      }
+    ]
   }
 ];
+
