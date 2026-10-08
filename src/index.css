@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  html.dark body {
+    background-color: #0b0f19;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle luxury utilities */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 40%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.15);
+}
+
+.navy-deep-gradient {
+  background: radial-gradient(circle at 10% 20%, #0F172A 0%, #0A1128 90%);
+}
+
+.subtle-paper-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+html.dark .subtle-paper-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Print styling for PDF export */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 15mm 15mm 15mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Preserve colors in color mode */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Black and White mode: Grayscale + high contrast + economize toner */
+  body.print-mode-bw {
+    filter: grayscale(100%) contrast(115%) !important;
+  }
+
+  body.print-mode-bw * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Infographic-Only print mode */
+  body.print-mode-infographic-only .chapter-prose-content {
+    display: none !important;
+  }
+
+  body.print-mode-infographic-only .chapter-bottom-nav {
+    display: none !important;
+  }
+
+  body.print-mode-infographic-only .embedded-infographic-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .avoid-page-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
